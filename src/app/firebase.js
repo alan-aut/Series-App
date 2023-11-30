@@ -10,12 +10,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyD1paIPbvj5mvpf2i4lbeOY1GOrWwUkiq0",
-    authDomain: "radiofrecuencias-app.firebaseapp.com",
-    projectId: "radiofrecuencias-app",
-    storageBucket: "radiofrecuencias-app.appspot.com",
-    messagingSenderId: "806319986820",
-    appId: "1:806319986820:web:a8c3e8dc6e2506a0cf8ad1"
+    apiKey: "AIzaSyBkR95SGgVXwzrSnCdjDDiID8G4lfbWWhw",
+    authDomain: "series-app-aj.firebaseapp.com",
+    projectId: "series-app-aj",
+    storageBucket: "series-app-aj.appspot.com",
+    messagingSenderId: "915053245539",
+    appId: "1:915053245539:web:affad8e5898fe613943456"
 };
 
 // Initialize Firebase
