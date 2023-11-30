@@ -10,14 +10,14 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./main.js"></script>
-    <title>REFRESCOS</title>
+    <title>SERIES</title>
 </head>
 
 <body>
     <!-- Navbar con tema oscuro -->
     <nav class="fixed-top">
         <div>
-            <h1 href="#">REFRESCOS</h1>
+            <h1 href="#">SERIES</h1>
             <div tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div>
                     <h4 id="offcanvasNavbarLabel">Opciones</h4>
@@ -33,12 +33,12 @@
                                 data-bs-target="#Registrarse">REGISTRARSE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="botonesConSesion" id="Mostrar-Manualidades"
-                                href="Subir Manualidades.html">REGISTRAR UN REFRESCO</a>
+                            <a class="botonesConSesion" id="Mostrar-Manualidades" href="Subir Series.html">REGISTRAR UNA
+                                SERIE</a>
                         </li>
                         <li class="nav-item">
                             <a class="botonesConSesion" id="Mostrar-Manualidades" href="index.html">VER
-                                REFRESCOS</a>
+                                SERIES</a>
                         </li>
                         <li class="nav-item">
                             <a class="botonesConSesion" id="CerrarSesion">CERRAR SESIÓN</a>
@@ -52,46 +52,50 @@
 
     <!-- Contenido del cuerpo aquí -->
 
-    <!-- Lista de Refrescos -->
+    <!-- Lista de Series -->
     <div class="custom-container">
         <div class="custom-row">
             <div class="custom-col">
-                <ul class="custom-list-group Refrescos"></ul>
+                <ul class="custom-list-group Series"></ul>
             </div>
         </div>
     </div>
 
     <!-- MODAL DE ACTUALIZACIÓN -->
-    <div class="modal fade" id="ActualizarRefresco" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="ActualizarSerie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header bg-dark">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Refresco</h1>
+            <div class="modal-content bg-light text-dark"> <!-- Cambiado a fondo claro y texto oscuro -->
+                <div class="modal-header bg-light"> <!-- Cambiado a fondo claro -->
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Serie</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="Formulario-ActualizarRefresco">
+                    <form id="Formulario-ActualizarSerie">
                         <div class="mb-3">
-                            <label for="Actualizar-Nombre">Nombre del Refresco</label>
+                            <label for="Actualizar-Nombre">Nombre de la Serie</label>
                             <input type="text" id="Actualizar-Nombre" class="form-control mb-3"
                                 placeholder="Ingresa el nuevo nombre">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Marca">Marca</label>
-                            <input type="text" id="Actualizar-Marca" class="form-control mb-3"
-                                placeholder="Ingresa la nueva marca">
+                            <label for="Actualizar-Tipo">Tipo</label>
+                            <input type="text" id="Actualizar-Tipo" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo tipo">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Fabricante">Fabricante</label>
-                            <input type="text" id="Actualizar-Fabricante" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo fabricante">
+                            <label for="Actualizar-Duracion">Duración</label>
+                            <input type="text" id="Actualizar-Duracion" class="form-control mb-3"
+                                placeholder="Ingresa la nueva duración">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-FechaCaducidad">Fecha de Caducidad</label>
-                            <input type="date" id="Actualizar-FechaCaducidad" class="form-control mb-3">
+                            <label for="Actualizar-AnoLanzamiento">Año de Lanzamiento</label>
+                            <input type="date" id="Actualizar-AnoLanzamiento" class="form-control mb-3">
                         </div>
-                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarRefresco">Actualizar</button>
+                        <div class="mb-3">
+                            <label for="Actualizar-Plataforma">Plataforma</label>
+                            <input type="text" id="Actualizar-Plataforma" class="form-control mb-3"
+                                placeholder="Ingresa la nueva plataforma">
+                        </div>
+                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarSerie">Actualizar</button>
                     </form>
                 </div>
             </div>
@@ -99,10 +103,11 @@
     </div>
 
 
+
     <!-- MODAL DE INICIO DE SESION -->
     <div class="modal fade" id="InicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content bg-dark">
+            <div class="modal-content bg-light text-dark"> <!-- Cambiado a fondo claro y texto oscuro -->
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">INICIAR SESIÓN</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -119,7 +124,8 @@
                         </label>
                         <input type="password" id="InicioSesion-Password" class="form-control mb-3"
                             placeholder="Ingresa tu contraseña" required>
-                        <button type="submit" class="btn btn-outline-light w-100 mb-2">INICIAR SESIÓN</button>
+                        <button type="submit" class="btn btn-outline-dark w-100 mb-2">INICIAR SESIÓN</button>
+                        <!-- Cambiado a botón oscuro -->
                     </form>
                     <button type="submit" id="Google-Auth" class="btn btn-outline-warning w-100 mb-2">INICIAR SESIÓN CON
                         GOOGLE</button>
@@ -133,7 +139,7 @@
     <!-- MODAL DE REGISTRO -->
     <div class="modal fade" id="Registrarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content bg-dark">
+            <div class="modal-content bg-light text-dark"> <!-- Cambiado a fondo claro y texto oscuro -->
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRATE</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -150,12 +156,14 @@
                         </label>
                         <input type="password" id="Registrarse-Password" class="form-control mb-3"
                             placeholder="Ingresa tu contraseña" required>
-                        <button type="submit" class="btn btn-outline-light w-100 mb-4">REGISTRARSE</button>
+                        <button type="submit" class="btn btn-outline-dark w-100 mb-4">REGISTRARSE</button>
+                        <!-- Cambiado a botón oscuro -->
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Scripts de Bootstrap y otros scripts necesarios -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
